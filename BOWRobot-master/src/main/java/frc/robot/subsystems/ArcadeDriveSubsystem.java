@@ -3,6 +3,7 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import edu.wpi.first.wpilibj.Compressor;
 import frc.robot.Robot;
 import frc.robot.subsystems.DriveTrainSubsystem;
 import frc.robot.RobotContainer;
@@ -12,6 +13,7 @@ import java.util.logging.Logger;
 
 public class ArcadeDriveSubsystem extends SubsystemBase{
 
+    Compressor c;
     private final VictorSP leftVictorSP1;
     private final VictorSP leftVictorSP2;
     private final VictorSP leftVictorSP3;
