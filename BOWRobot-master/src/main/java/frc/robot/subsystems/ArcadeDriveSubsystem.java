@@ -1,6 +1,5 @@
 package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -52,29 +51,5 @@ public class ArcadeDriveSubsystem extends SubsystemBase{
         // used http://programming.sdarobotics.org/robot-java/arcade-drive/ as reference
 
         drive(y+x, y-x);
-
-        public void teleopPeriodic() {
-            double rot = -joystick.getX();
-            double speed = -joystick.getY();
-            myRobot.arcadeDrive(speed,rot);
-            if(stick.getRawButton(3)){
-                victor.set(1);
-            }
-            else if(stick.getRawButton(2)){
-                victor.set(-1);
-            }
-            else{
-                victor.set(0);
-            }
-            ArmsDouble= new DoubleSolenoid(1, 2);
-            ArmsDouble= new DoubleSolenoid(1, 1, 2);
-            if(stick.getRawButton(4)){
-                ArmsDouble.set(DoubleSolenid.Value.kForward);
-
-            }
-            else if(stick.getRawButton(5)){
-                ArmsDouble.set(DoubleSolenoid.Value.kReverse);
-
-            }
     }
 }
