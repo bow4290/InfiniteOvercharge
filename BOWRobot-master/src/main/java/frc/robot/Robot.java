@@ -62,6 +62,7 @@ public class Robot extends TimedRobot {
         int leftShooterChannel = 0;
         int rightShooterChannel = 0;
 
+
         int topMotorChannel = 0;
         int bottomMotorChannel = 0;
 
@@ -77,6 +78,7 @@ public class Robot extends TimedRobot {
 
         driveTrainSubsystem = new DriveTrainSubsystem(leftVictorSPChannel1, leftVictorSPChannel2, leftVictorSPChannel3,
                                                     rightVictorSPChannel1, rightVictorSPChannel2, rightVictorSPChannel3);
+
         colorSensorSubsystem = new ColorSensorSubsystem(kBlueTarget, kGreenTarget, kRedTarget, kYellowTarget);
         shootingSubsystem = new ShootingSubsystem(leftShooterChannel, rightShooterChannel);
 
