@@ -1,6 +1,5 @@
 package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj.SensorUtil;
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.commands.VictorSPDriveCommand;
@@ -31,8 +30,6 @@ public class DriveTrainSubsystem extends SubsystemBase {
      * @param rightspeed
      */
     public void drive(double leftspeed, double rightspeed) {
-//        System.out.println("Left value is "+leftspeed);
-//        System.out.println("Right value is "+rightspeed);
         leftVictorSP1.setSpeed(leftspeed);
         leftVictorSP2.setSpeed(leftspeed);
         leftVictorSP3.setSpeed(leftspeed);
